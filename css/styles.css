@@ -28,7 +28,6 @@
 body {
     font-family: var(--primary-text);
     font-size: 16px;
-    /* line-height: 1.5; */
     background-color: var(--white);
     color: var(--slate);
 }
@@ -70,12 +69,31 @@ button {
 
 /* reset end */
 .container {
-    width: 1158px;
+    min-width: 320px;
+    max-width: 428px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+
+    outline: 2px solid tomato;
+    outline-offset: -2px;
 }
+
+@media only screen and (min-width:768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media only screen and (min-width:1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 
 .header {
     border-bottom: 1px solid var(--cornflower);
@@ -216,19 +234,34 @@ a {
 }
 
 .hero-head {
-    font-size: 56px;
-    line-height: 1.07;
-    text-align: center;
-    letter-spacing: 0.02em;
-    margin-bottom: 48px;
-    color: var(--white);
-    max-width: 496px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 320px;
+    margin-bottom: 72px;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--white);
+
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-head {
+        max-width: 496px;
+        margin-bottom: 56px;
+        font-size: 56px;
+        line-height: 1.07;
+    }
+}
+
+@media only screen and (min-width:1158px) {
+    .hero-head {
+        margin-bottom: 48px;
+    }
 }
 
 .hero-btn {
-    font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -243,7 +276,6 @@ a {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     margin: auto;
-    cursor: pointer;
     transition: background-color var(--anim);
 }
 
@@ -490,51 +522,113 @@ a {
 */
 
 .benefits-main {
-    padding: 120px 0;
+
+    padding: 96px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+    .benefits-main {
+        padding: 120px 0;
+
+    }
 }
 
 .benefits-list {
-    display: flex;
-    gap: 24px;
+    display: block;
+
 }
 
-.benefits-item {
-    width: calc(100% - (24px*(var(--benefits-columnum) - 1)*var(--benefits-columnum)));
+@media only screen and (min-width: 768px) {
+    .benefits-list {
+        display: flex;
+        gap: 72px 24px;
+    }
 }
 
+@media only screen and (min-width: 1158px) {
+    .benefits-list {
+        gap: 24px;
+    }
+}
 
-.benefits-icon-bcg {
-    display: flex;
-    background-color: var(--cloud);
-    height: 112px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
-    border-radius: 4px;
+/* @media only screen and (min-width: 768px) {
+    .benefits-item {
+        width: calc(100% - (24px*(var(--benefits-columnum) - 1)*var(--benefits-columnum)));
+    }
+} */
+
+@media only screen and (min-width: 1158px) {
+    .benefits-item {
+        width: calc(100% - (24px*(var(--benefits-columnum) - 1)*var(--benefits-columnum)));
+    }
+}
+
+@media only screen and (max-width: 1157px) {
+    .benefits-icon-bcg {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .benefits-icon-bcg {
+        display: flex;
+        background-color: var(--cloud);
+        height: 112px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        border-radius: 4px;
+    }
 }
 
 .benefits-head {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
     letter-spacing: 0.02em;
+    text-align: center;
     color: var(--navy-blue);
-    margin-bottom: 8px;
+}
 
+@media only screen and (min-width: 1158px) {
+    .benefits-head {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
 }
 
 .benefits-text {
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: left;
     color: var(--slate);
 }
 
+@media only screen and (min-width: 1158px) {
+    .benefits-text {
+        font-weight: 400;
+    }
+}
+
+
 .products {
 
-    padding-bottom: 120px;
+    display: none;
 }
+
+@media only screen and (min-width: 1158px) {
+    .products {
+        display: block;
+        padding-bottom: 120px;
+
+    }
+}
+
+
 
 .products-head {
     font-weight: 700;
