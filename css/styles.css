@@ -17,7 +17,8 @@
     --secondary-text: Raleway, sans-serif;
     --benefits-columnum: 4;
     --products-num: 3;
-    --our-team-num: 4;
+    --our-team-num: 1;
+    /* --our-team-num: 4; */
     --portf-list-num: 3;
     --web-link-num: 4;
     --brand-num: 6;
@@ -609,7 +610,6 @@ a {
 
 
 .products {
-
     display: none;
 }
 
@@ -650,13 +650,7 @@ a {
 
 .our-team {
     background-color: var(--cloud);
-    padding: 96px 82px;
-}
-
-@media only screen and (min-width: 1158px) {
-    .our-team {
-        padding: 120px 0;
-    }
+    padding: 120px 0;
 }
 
 .our-team-main {
@@ -670,51 +664,22 @@ a {
     margin-bottom: 72px;
 }
 
-@media only screen and (min-width: 428px) {
-    .our-team-list {
-        display: block;
-    }
+.our-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
 }
-
-
-@media only screen and (min-width: 1158px) {
-    .our-team-list {
-        display: flex;
-        gap: 24px;
-        justify-content: center;
-    }
-}
-
 
 .our-team-item {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 72px;
-    width: 264px;
+    background-color: var(--white);
+    width: calc(100%-(24px*(var(--our-team-num)-1)))/var(--our-team-num);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    background-color: var(--white);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
         0px 1px 1px 0px rgba(46, 47, 66, 0.16),
         0px 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
-
-.our-team-item:last-child {
-    margin-bottom: 0;
-}
-
-@media only screen and (min-width: 1158px) {
-    .our-team-item {
-        width: calc(100%-(24px*(var(--our-team-num)-1)))/var(--our-team-num);
-        margin-bottom: 0;
-    }
-}
-
-.our-team-list .our-team-item img {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 .our-team-mem {
     font-weight: 500;
@@ -772,7 +737,11 @@ a {
     fill: var(--cloud);
 }
 
-
+/**
+  |============================
+  | Customers
+  |============================
+*/
 .customer {
     padding: 120px 0;
 }
