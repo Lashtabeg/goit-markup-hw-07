@@ -15,7 +15,8 @@
     /* Fonts */
     --primary-text: Roboto, sans-serif;
     --secondary-text: Raleway, sans-serif;
-    --benefits-columnum: 4;
+    --benefits-columnum: 2;
+    /* --benefits-columnum: 4; */
     --products-num: 3;
     --our-team-num: 1;
     /* --our-team-num: 4; */
@@ -246,15 +247,40 @@ button {
 }
 
 .address-text {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--slate);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+
+@media only screen and (min-width: 1158px) {
+    .address-text {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--slate);
+    }
 }
 
 .address-container {
-    display: flex;
-    gap: 40px;
+    display: block;
+}
+
+@media only screen and (min-width: 1158px) {
+    .address-container {
+        display: flex;
+        gap: 40px;
+
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .address-step {
+        margin-bottom: 12px;
+    }
+
 }
 
 .menu-ham {
@@ -363,11 +389,10 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(2turn) scale(1);
+    transform: translate(-50%, -50%) rotate(1turn) scale(1);
     opacity: 1;
-
-    min-height: 576px;
-    width: 408px;
+    min-height: 586px;
+    width: 392px;
     border-radius: 4px;
     padding: 24px;
 
@@ -379,6 +404,14 @@ button {
     transition: transform var(--anim), opacity var(--anim);
 
 }
+
+@media only screen and (min-width: 768px) {
+    .modal {
+        min-height: 586px;
+        width: 408px;
+    }
+}
+
 
 .backdrop.is-hidden .modal {
     top: 50%;
@@ -584,16 +617,15 @@ button {
 
 }
 
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .benefits-list {
         display: flex;
-        gap: 72px 24px;
+        gap: 24px;
     }
-} */
+}
 
 @media only screen and (min-width: 1158px) {
     .benefits-list {
-        display: flex;
         gap: 24px;
     }
 }
@@ -1179,9 +1211,8 @@ button {
 }
 
 .mobile-menu {
-    margin-bottom: auto;
+    margin: 0 0 auto 0;
     padding: 0;
-    margin: 0;
     list-style: none;
 }
 
@@ -1196,11 +1227,28 @@ button {
     text-align: left;
 }
 
+
 .mobile-contacts {
+    /* margin-top: auto; */
     margin-bottom: 48px;
 }
 
+.mobile-tel-link {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.mobile-tel {
+    margin-bottom: 40px;
+}
 
 .mobile-social {
-    gap: 56px;
+    justify-content: space-around;
+}
+
+.current-mobile {
+    color: var(--iris);
 }

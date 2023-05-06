@@ -28,7 +28,7 @@
             Web<span class="logo-dark">Studio</span>
           </a>
           <ul class="nav-list list">
-            <li>
+            <li >
               <a href="./index.html" class="nav-site link current">Studio</a>
             </li>
             <li>
@@ -39,8 +39,8 @@
           </ul>
         </nav>
         <address class="address">
-          <ul class="list address-container">
-            <li>
+          <ul class="address-container list ">
+            <li class="address-step">
               <a href="mailto:info@devstudio.com" class="address-text link"
                 >info@devstudio.com</a
               >
@@ -67,16 +67,16 @@
     </header> 
     <main>
       <!-- Hero -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-head">Effective Solutions for Your Business</h1>
           <button type="button" class="hero-btn" data-modal-open>
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
       <!-- Modal Window-->
-      <!-- <div class="backdrop is-hidden" data-modal>
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <button class="modal-btn button" type="button" data-modal-close>
             <svg class="modal-icon-close" width="8" height="8">
@@ -159,7 +159,7 @@
             <button class="hero-btn button" type="submit">Send</button>
           </form>
         </div>
-      </div> -->
+      </div> 
       <!-- Benfits(Section 1 )-->
       <!-- <section class="benefits-main">
         <div class="container">
@@ -219,7 +219,7 @@
         </div>
       </section> -->
       <!-- What are we doing/PRODUCTS(Section 2) -->
-      <!-- <section class="products">
+      <section class="products">
         <div class="container">
           <h2 class="products-head">What are we doing</h2>
           <ul class="products-list list">
@@ -236,9 +236,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Our Team(Section 3)-->
-      <!-- <section class="our-team">
+      <section class="our-team">
         <div class="container team">
           <h2 class="our-team-main">Our Team</h2>
           <ul class="our-team-list list">
@@ -504,7 +504,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Customers -->
       <!-- <section class="customer">
         <div class="container">
@@ -700,69 +700,71 @@
         </button>
 
       <ul class="mobile-menu list">
-        <li><a href="" class="link">Studio</a></li>
-        <li><a href="" class="link">Portfolio</a></li>
+        <li><a href="./index.html" class="link current-mobile">Studio</a></li>
+        <li><a href="./portfolio.html" class="link">Portfolio</a></li>
         <li><a href="" class="link">Contacts</a></li>
       </ul>
 
-      <ul class="mobile-contacts list">
-        <li><a href="tel:+110001111111">+11 (000) 111-11-11</a></li>
-        <li><a  href="mailto:">info@devstudio.com</a></li>
-      </ul>
-      <ul class="social footer-icon list mobile-social">
-        <li class="social-item">
-          <a
-            class="social-link link"
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram icon"
-          >
-            <svg class="social-icon" width="24" height="24">
-              <use href="./images/icon.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-item">
-          <a
-            class="social-link link"
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter icon"
-          >
-            <svg class="social-icon" width="24" height="24">
-              <use href="./images/icon.svg#icon-twitter"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-item">
-          <a
-            class="social-link link"
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook icon"
-          >
-            <svg class="social-icon" width="24" height="24">
-              <use href="./images/icon.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social-item">
-          <a
-            class="social-link link"
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Linkedin icon"
-          >
-            <svg class="social-icon" width="24" height="24">
-              <use href="./images/icon.svg#icon-linkedin"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="mobile-block">
+        <ul class="mobile-contacts list">
+          <li class="mobile-tel"><a class="mobile-tel-link link" href="tel:+110001111111">+11(000)111-11-11</a></li>
+          <li><a class="mobile-mail-link link"  href="mailto:">info@devstudio.com</a></li>
+        </ul>
+        <ul class="social footer-icon list mobile-social">
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icon.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icon.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icon.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Linkedin icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icon.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
     <script
