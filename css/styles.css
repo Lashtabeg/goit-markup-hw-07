@@ -20,6 +20,7 @@
     --products-num: 3;
     --our-team-num: 1;
     /* --our-team-num: 4; */
+    --customers-num: 2;
     --portf-list-num: 3;
     --web-link-num: 4;
     --brand-num: 6;
@@ -620,6 +621,7 @@ button {
 @media only screen and (min-width: 768px) {
     .benefits-list {
         display: flex;
+        flex-wrap: wrap;
         gap: 24px;
     }
 }
@@ -837,17 +839,40 @@ button {
 
 .customer-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
+}
 
+@media only screen and (min-width: 768px) {
+    .customer-list {
+        gap: 24px;
+    }
 }
 
 .costumer-brand {
-    width: calc((100% - 120px) / 6);
+    width: calc((100% - (16px * (var(--customers-num)-1))) / var(--customers-num));
+    /* width: calc((100% - 16px) / 2); */
+
     height: 88px;
     border-radius: 4px;
 }
+
+@media only screen and (min-width: 768px) {
+    .costumer-brand {
+        --customers-num: 3;
+        width: calc((100% - (24px * (var(--customers-num)-1))) / var(--customers-num));
+        /* width: calc((100% - 120px) / 6); */
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .costumer-brand {
+        --customers-num: 6
+    }
+}
+
 
 .customer-item {
     display: flex;
@@ -1234,7 +1259,7 @@ button {
 }
 
 .mobile-tel-link {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -1243,6 +1268,14 @@ button {
 
 .mobile-tel {
     margin-bottom: 40px;
+}
+
+.mobile-mail-link {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: left;
 }
 
 .mobile-social {
