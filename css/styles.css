@@ -82,8 +82,8 @@ button {
     margin-left: auto;
     margin-right: auto;
 
-    outline: 2px solid tomato;
-    outline-offset: -2px;
+    /* outline: 2px solid tomato;
+    outline-offset: -2px; */
 }
 
 @media only screen and (min-width:768px) {
@@ -1097,6 +1097,7 @@ button {
 .footer {
     background-color: var(--navy-blue);
     padding: 100px 0;
+    width: 100%;
 
 }
 
@@ -1105,6 +1106,7 @@ button {
     flex-wrap: wrap;
     align-items: baseline;
     gap: 72px 24px;
+
 
 }
 
@@ -1183,6 +1185,13 @@ button {
     background-color: var(--green);
 }
 
+@media only screen and (max-width: 428px) {
+    .footer-right {
+        width: 100%;
+    }
+}
+
+
 .footer-right-head {
     margin-bottom: 16px;
     font-family: Roboto;
@@ -1200,10 +1209,14 @@ button {
     }
 }
 
+@media only screen and (max-width: 428px) {
+    .footer-label {
+        width: 100%;
+    }
+}
 
 @media only screen and (max-width: 767px) {
     .footer-label {
-
         margin-bottom: 16px;
     }
 }
@@ -1214,19 +1227,17 @@ button {
     flex-wrap: wrap;
     align-items: center;
     gap: 24px;
+
 }
 
 @media only screen and (max-width: 427px) {
     .footer-label-sub {
+
         justify-content: center;
         flex-direction: column;
         gap: 0;
     }
 }
-
-
-
-.footer-label {}
 
 ::placeholder {
     font-size: 12px;
