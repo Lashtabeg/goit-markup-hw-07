@@ -15,7 +15,6 @@
     /* Fonts */
     --primary-text: Roboto, sans-serif;
     --secondary-text: Raleway, sans-serif;
-    /* --benefits-columnum: 2; */
     --benefits-columnum: 4;
     --products-num: 3;
     --our-team-num: 1;
@@ -611,7 +610,13 @@ button {
 */
 
 .benefits-main {
-    padding: 120px 0;
+    padding: 96px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+    .benefits-main {
+        padding: 120px 0;
+    }
 }
 
 .benefits-list {
@@ -620,40 +625,81 @@ button {
 }
 
 .benefits-item {
+    /* display: flex; */
+
     width: calc(100% - (24px*(var(--benefits-columnum) - 1)*var(--benefits-columnum)));
 }
 
 
 .benefits-icon-bcg {
-    display: flex;
-    background-color: var(--cloud);
-    height: 112px;
-    justify-content: center;
-    align-items: center;
+    display: none;
+}
+
+@media only screen and (min-width: 1158px) {
+    .benefits-icon-bcg {
+        display: flex;
+        background-color: var(--cloud);
+        height: 112px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        border-radius: 4px;
+
+    }
+}
+
+.benefits-head {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--navy-blue);
     margin-bottom: 8px;
-    border-radius: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+    .benefits-head {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .benefits-head {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
 }
 
 .benefits-head {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--navy-blue);
-    margin-bottom: 8px;
+
 
 }
 
 .benefits-text {
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: left;
     color: var(--slate);
 }
 
+@media only screen and (min-width: 1158px) {
+    .benefits-text {
+        font-weight: 400;
+    }
+}
 
-
+/**
+  |============================
+  | Products
+  |============================
+*/
 .products {
     display: none;
 }
