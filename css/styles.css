@@ -15,7 +15,7 @@
     /* Fonts */
     --primary-text: Roboto, sans-serif;
     --secondary-text: Raleway, sans-serif;
-    --benefits-columnum: 4;
+    --benefits-columnum: 2;
     --products-num: 3;
     --our-team-num: 1;
     /* --our-team-num: 4; */
@@ -175,18 +175,19 @@ button {
 .header-container {
     display: flex;
     align-items: center;
+    height: 70px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 767px) {
     .header-container {
-        height: 70px;
+        height: 72px;
 
     }
 }
 
 .nav-site {
     position: relative;
-    display: block;
+    /* display: block; */
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -259,6 +260,7 @@ button {
     line-height: 1.16;
     letter-spacing: 0.04em;
     text-align: left;
+    color: var(--slate);
 }
 
 
@@ -267,7 +269,7 @@ button {
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: var(--slate);
+
     }
 }
 
@@ -414,7 +416,6 @@ button {
 
 @media only screen and (min-width: 768px) {
     .modal {
-        min-height: 586px;
         width: 408px;
     }
 }
@@ -636,14 +637,24 @@ button {
 
 @media only screen and (min-width: 1158px) {
     .benefits-list {
+        flex-wrap: nowrap;
         gap: 24px;
 
     }
 }
 
-/* .benefits-item {
-    width: calc(100% - (24px*(var(--benefits-columnum) - 1)*var(--benefits-columnum)));
-} */
+@media only screen and (min-width: 768px) {
+    .benefits-item {
+        width: calc(((100% - (24px*(var(--benefits-columnum) - 1)))/var(--benefits-columnum)));
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .benefits-item {
+        --benefits-columnum: 4;
+        width: calc(((100% - (24px*(var(--benefits-columnum) - 1)))/var(--benefits-columnum)));
+    }
+}
 
 
 .benefits-icon-bcg {
@@ -1207,15 +1218,12 @@ button {
 @media only screen and (max-width: 427px) {
     .footer-label-sub {
         justify-content: center;
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 0;
     }
 }
 
-.footer-label {
-    display: inline-block;
-    /* margin-right: 24px; */
-}
+.footer-label {}
 
 ::placeholder {
     font-size: 12px;
@@ -1227,6 +1235,7 @@ button {
 }
 
 .footer-email {
+
     padding-left: 16px;
     width: 100%;
     height: 40px;
