@@ -1208,13 +1208,6 @@ button {
     }
 }
 
-.footer-label-sub {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 24px;
-}
-
 @media only screen and (max-width: 427px) {
     .footer-label-sub {
         justify-content: center;
@@ -1222,6 +1215,15 @@ button {
         gap: 0;
     }
 }
+
+.footer-label-sub {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+}
+
+
 
 .footer-label {}
 
