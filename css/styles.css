@@ -1218,7 +1218,7 @@ button {
 @media only screen and (max-width: 427px) {
     .footer-label-sub {
         justify-content: center;
-        /* flex-direction: column; */
+        flex-direction: column;
         gap: 0;
     }
 }
