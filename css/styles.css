@@ -1007,7 +1007,20 @@ button {
   |============================
 */
 .portf-menu {
-    padding: 96px 0 120px;
+    padding: 48px 0;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .portf-menu {
+        padding: 64px 0 96px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .portf-menu {
+        padding: 96px 0 120px;
+    }
 }
 
 .visually-hidden {
@@ -1026,9 +1039,24 @@ button {
 
 .portf-btn-list {
     display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 72px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px) {
+    .portf-btn-list {
+        margin-bottom: 64px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .portf-btn-list {
+        margin-bottom: 72px;
+
+    }
 }
 
 .portf-btn {

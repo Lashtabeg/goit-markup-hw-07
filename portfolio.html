@@ -28,22 +28,24 @@
             Web<span class="logo-dark">Studio</span>
           </a>
           <ul class="nav-list list">
-            <li><a href="./index.html" class="nav-site link">Studio</a></li>
             <li>
-              <a href="./portfolio.html" class="nav-site link current"
-                >Portfolio</a
-              >
+              <a href="./index.html" class="nav-site link current">Studio</a>
             </li>
+            <li>
+              <a href="./portfolio.html" class="nav-site link">Portfolio</a>
+            </li>
+
             <li><a href="" class="nav-site link">Contacts</a></li>
           </ul>
         </nav>
         <address class="address">
-          <ul class="list address-container">
-            <li>
+          <ul class="address-container list">
+            <li class="address-step">
               <a href="mailto:info@devstudio.com" class="address-text link"
                 >info@devstudio.com</a
               >
             </li>
+
             <li>
               <a href="tel:+110001111111" class="address-text link"
                 >+11 (000) 111-11-11</a
@@ -51,6 +53,16 @@
             </li>
           </ul>
         </address>
+        <!-- Modal BTN Mobile -->
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-ham" width="32" height="22">
+            <use href="./images/icon.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -276,9 +288,11 @@
     <footer class="footer">
       <div class="footer-conteiner container">
         <div class="footer-left">
-          <a href="./index.html" class="link logo footer-logo"
-            >Web<span class="logo-light">Studio</span></a
-          >
+          <div class="footer-logo-box">
+            <a href="./index.html" class="link logo footer-logo"
+              >Web<span class="logo-light">Studio</span></a
+            >
+          </div>
           <p class="footer-text">
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
@@ -365,5 +379,98 @@
         </div>
       </div>
     </footer>
+    <!-- MObile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu" type="button" data-modal-close>
+        <svg class="" width="8" height="8">
+          <use href="./images/icon.svg#icon-close-black"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li><a href="./index.html" class="link">Studio</a></li>
+        <li>
+          <a href="./portfolio.html" class="link current-mobile">Portfolio</a>
+        </li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+
+      <div class="mobile-block">
+        <ul class="mobile-contacts list">
+          <li class="mobile-tel">
+            <a class="mobile-tel-link link" href="tel:+110001111111"
+              >+11(000)111-11-11</a
+            >
+          </li>
+          <li>
+            <a class="mobile-mail-link link" href="mailto:"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="social footer-icon list mobile-social">
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icon.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icon.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icon.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Linkedin icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icon.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
