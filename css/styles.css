@@ -306,15 +306,66 @@ button {
 .hero {
     background-color: var(--navy-blue);
     padding: 188px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-            rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+
     background-repeat: no-repeat;
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     background-position: center;
     background-size: cover;
+
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@1x.jpg);
 }
+
+@media only screen and (max-width: 767px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@2x.jpg);
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)), url(../images/hero/office_tab@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)), url(../images/hero/office_tab@2x.jpg);
+        }
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@2x.jpg);
+        }
+    }
+}
+
 
 .hero-head {
     margin-left: auto;
@@ -1110,7 +1161,7 @@ button {
 
 }
 
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 767px) {
     .footer-conteiner {
         justify-content: center;
     }
@@ -1165,7 +1216,7 @@ button {
     margin-bottom: 16px;
 }
 
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 767px) {
     .footer-social {
         text-align: center;
 
@@ -1185,7 +1236,7 @@ button {
     background-color: var(--green);
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 767px) {
     .footer-right {
         width: 100%;
     }
@@ -1203,22 +1254,21 @@ button {
     color: var(--white);
 }
 
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 767px) {
     .footer-right-head {
         text-align: center;
     }
 }
 
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 767px) {
     .footer-label {
         width: 100%;
+        margin-bottom: 16px;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    .footer-label {
-        margin-bottom: 16px;
-    }
+    .footer-label {}
 }
 
 
@@ -1230,7 +1280,7 @@ button {
 
 }
 
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 767px) {
     .footer-label-sub {
 
         justify-content: center;
@@ -1303,8 +1353,8 @@ button {
   |============================
 */
 .menu-toggle {
-    min-height: 40px;
-    min-width: 40px;
+    min-height: 24px;
+    min-width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1316,6 +1366,16 @@ button {
     border: none;
     border-radius: 50%;
     outline: none;
+
+
+}
+
+.menu-container.js-menu-container.is-open>.menu-toggle {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    fill: var(--navy-blue)
 }
 
 @media (min-width: 768px) {
