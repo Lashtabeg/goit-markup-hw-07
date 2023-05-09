@@ -80,9 +80,6 @@ button {
     padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
-
-    /* outline: 2px solid tomato;
-    outline-offset: -2px; */
 }
 
 @media only screen and (min-width:768px) {
@@ -927,6 +924,13 @@ button {
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .customer .container {
+        max-width: 552px;
+    }
+}
+
+
 .head-customer {
     font-size: 36px;
     font-weight: 700;
@@ -944,13 +948,6 @@ button {
     align-items: center;
     gap: 72px 16px;
 
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
-    .customer-list {
-
-        gap: 72px 24px;
-    }
 }
 
 .costumer-brand {
@@ -1174,6 +1171,7 @@ button {
 
 }
 
+
 .footer-conteiner {
     display: flex;
     flex-wrap: wrap;
@@ -1185,6 +1183,12 @@ button {
 @media only screen and (max-width: 767px) {
     .footer-conteiner {
         justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+    .footer .conteiner {
+        max-width: 552px;
     }
 }
 
@@ -1225,7 +1229,7 @@ button {
     margin-bottom: 16px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1168px) {
     .footer-middle {
         margin-right: 80px;
     }
