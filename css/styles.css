@@ -1236,8 +1236,8 @@ button {
     margin-bottom: 16px;
 }
 
-@media only screen and (min-width: 1168px) {
-    .footer-middle {
+@media only screen and (min-width: 1158px) {
+    .social.footer-icon.list {
         margin-right: 80px;
     }
 }
