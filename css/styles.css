@@ -1431,7 +1431,7 @@ button {
     flex-direction: column;
     overflow: auto;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     padding: 32px;
     background-color: var(--white);
     z-index: 999;
@@ -1445,6 +1445,7 @@ button {
 .menu-container.is-open {
     transform: translateX(0);
 }
+
 
 .menu-container .menu-toggle {
     position: absolute;
