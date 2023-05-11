@@ -1089,16 +1089,26 @@ button {
 
 
 .portf-apps-list {
-
     display: flex;
     flex-wrap: wrap;
     gap: 48px 24px;
 }
 
-.portf-apps-item {
-    width: calc((100%-(24px*var(--portf-list-num)-1))/var(--portf-list-num));
-    box-sizing: content-box;
+@media only screen and (min-width: 768px) {
+    .portf-apps-item {
+        width: 356px;
+        box-sizing: content-box;
+    }
 }
+
+@media only screen and (min-width: 1168px) {
+    .portf-apps-item {
+        width: calc((100%-(24px*var(--portf-list-num)-1))/var(--portf-list-num));
+
+    }
+}
+
+
 
 
 .portf-link {
