@@ -19,7 +19,7 @@
     --products-num: 3;
     --our-team-num: 1;
     --customers-num: 2;
-    --portf-list-num: 3;
+    --portf-list-num: 2;
     --web-link-num: 4;
     --brand-num: 6;
     --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -302,14 +302,12 @@ button {
     background-position: center;
     background-size: cover;
 
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-            rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@1x.jpg);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 428px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@1x.jpg);
+                rgba(46, 47, 66, 0.7)), url(../images/hero/office_mob@1x.jpg);
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -317,12 +315,12 @@ button {
     (min-resolution: 2dppx) {
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@2x.jpg);
+                    rgba(46, 47, 66, 0.7)), url(../images/hero/office_mob@1x.jpg);
         }
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 429px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)), url(../images/hero/office_tab@1x.jpg);
@@ -338,7 +336,7 @@ button {
     }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 769px) {
     .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)), url(../images/hero/office_lap@1x.jpg);
@@ -1091,19 +1089,22 @@ button {
 .portf-apps-list {
     display: flex;
     flex-wrap: wrap;
+
     gap: 48px 24px;
 }
 
 @media only screen and (min-width: 768px) {
     .portf-apps-item {
-        width: 356px;
+        /* width: 356px; */
+        width: calc((100%-(24px*var(--portf-list-num)-1))/var(--portf-list-num));
         box-sizing: content-box;
     }
 }
 
 @media only screen and (min-width: 1168px) {
     .portf-apps-item {
-        width: calc((100%-(24px*var(--portf-list-num)-1))/var(--portf-list-num));
+        --portf-list-num: 3;
+        /* width: calc((100%-(24px*var(--portf-list-num)-1))/var(--portf-list-num)); */
 
     }
 }
